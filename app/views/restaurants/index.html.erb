@@ -1,0 +1,16 @@
+<h1 class= "text-center">My restaurants</h1>
+<div class = "container d-flex flex-wrap">
+
+  <% @restaurants.each  do |restaurant| %>
+    <div class = "card m-4 bg-info justify-center text-center">
+      <div class = "card-body">
+        <h1 class= "bg-primary"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-white text-decoration-none" %></h1>
+        <%= image_tag "index.jpeg" %>
+      </div>
+    </div>
+  <% end %>
+
+
+</div>
+
+<%= link_to "Create a new Restaurant", new_restaurant_path, class: " w-50 btn btn-primary d-flex text-center" %>
